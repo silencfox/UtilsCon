@@ -8,18 +8,25 @@ namespace UtilesCon
 {
     class Calcular
     {
-        public int Suma(int val1, int val2) {
-            int result;
+        private int _ival1;
+        private int _ival2;
+        private double _dval1;
+        private double _dval2;
 
-            result=val1 + val2;
-            return result;
-        }
+        public int Ival1 { get => _ival1; set => _ival1 = value; }
+        public int Ival2 { get => _ival2; set => _ival2 = value; }
+        public double Dval1 { get => _dval1; set => _dval1 = value; }
+        public double Dval2 { get => _dval2; set => _dval2 = value; }
 
-        public int restar(int val1, int val2) {
-            int result;
-            result =val1 - val2;
-            return result;
+        public Calcular() {
+        
+        
         }
+        public int Suma(int ival1, int ival2) => ival1 + ival2;
+        public int restar(int ival1, int ival2)=> ival1 - ival2;
+        public int multiplicar(int ival1, int ival2) => ival1 * ival2;
+        public double dividir(double dval1, double dval2)=> dval1 / dval2;
+
 
     }
 }
